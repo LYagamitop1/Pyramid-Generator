@@ -225,3 +225,159 @@ for i in range(num):
     x = " ".join(letter_list)
     
     print(x)
+
+
+
+print(f"""
+      Type 8: 
+      
+      """)
+
+for i in range(num):
+    j = num - i
+    num_list = []
+
+    while j != 0:
+        num_list.append("*") 
+        j -= 1
+
+    no_of_spaces = num - len(num_list)
+
+    while no_of_spaces != 0:
+        num_list.append(" ")
+        no_of_spaces -= 1
+
+    final_list = " ".join(num_list + num_list[::-1])
+
+    print(final_list)
+    
+    
+for i in range(num):
+    j = 0
+    num_list = []
+
+    while j <= i:
+        num_list.append("*") 
+        j += 1
+
+    no_of_spaces = num - len(num_list)
+
+    while no_of_spaces != 0:
+        num_list.append(" ")
+        no_of_spaces -= 1
+
+    final_list = " ".join(num_list + num_list[::-1])
+
+    print(final_list)
+
+
+
+print(f"""
+      Type 9: 
+      
+      """)
+
+
+
+for i in range(num):
+    j = 0
+    num_list = []
+
+    while j <= i:
+        num_list.append("*") 
+        j += 1
+
+    no_of_spaces = num - len(num_list)
+
+    while no_of_spaces != 0:
+        num_list.append(" ")
+        no_of_spaces -= 1
+
+    final_list = " ".join(num_list + num_list[::-1])
+
+    print(final_list)
+
+
+for i in range(num):
+    j = num - i -1
+    num_list = []
+
+    while j != 0:
+        num_list.append("*") 
+        j -= 1
+
+    no_of_spaces = num - len(num_list)
+
+    while no_of_spaces != 0:
+        num_list.append(" ")
+        no_of_spaces -= 1
+
+    final_list = " ".join(num_list + num_list[::-1])
+
+    print(final_list)
+    
+    
+
+print(f"""
+      Type 10: Concentric NUmber Pattern
+      
+      """)
+
+
+
+pattern_list = []
+number_track = num
+width = len(str(num))
+
+for i in range(num):
+          
+    k = num - len(pattern_list)
+    while k!=0:
+        pattern_list.append(number_track)
+        k -= 1
+        
+    second_reversed_part = pattern_list[:len(pattern_list)-1]
+    second_reversed_part.reverse()
+    
+    final_list = pattern_list + second_reversed_part
+    
+    
+    number_track -= 1
+    
+    x = " ".join(f"{v:>{width}}" for v in final_list)
+    print(x)
+    
+    j = num - i - 1
+    while j!=0:
+        pattern_list.pop()
+        j -= 1
+        
+        
+
+
+number_track = 2
+
+for i in range(num-1):
+    
+    j = i+1
+    while j!=0:
+        pattern_list.pop()
+        j -= 1
+          
+    k = num - len(pattern_list)
+    while k!=0:
+        pattern_list.append(str(number_track))
+        k -= 1
+        
+    second_reversed_part = pattern_list[:len(pattern_list)-1]
+    second_reversed_part.reverse()
+    
+    final_list = pattern_list + second_reversed_part
+    
+    
+    number_track += 1
+    
+    x = " ".join(f"{int(v):>{width}}" for v in final_list)
+    print(x)
+    
+
