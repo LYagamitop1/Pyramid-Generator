@@ -1,5 +1,5 @@
 
-num = int(input("Enter number of rows in a pyramid: "))
+num = int(input("Enter number of rows in a pattern: "))
 
 
       
@@ -12,6 +12,7 @@ print(f"""
 for i in range(num):
     j=0
     row_stars = []
+    row_stars.append("                                                  ")
     while j<=i:  
         row_stars.append("*")  
         j += 1
@@ -29,6 +30,7 @@ print(f"""
 for i in range(num):
     j=0
     row_stars = []
+    row_stars.append("                                                  ")
     while j<=i:  
         row_stars.append(str(j+1))        
         j += 1
